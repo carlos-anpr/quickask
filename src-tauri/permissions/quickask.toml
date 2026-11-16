@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-quickask"
+description = "Desktop assistant commands for the local main window"
+commands.allow = ["ask", "stop", "replyPermission", "newConversation", "hide", "resize", "needsScreen", "getState", "setVariant", "setModel", "openInTerminal", "openUrl"]

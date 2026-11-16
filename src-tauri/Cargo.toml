@@ -1,0 +1,36 @@
+[package]
+name = "quickask"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+regex = "1"
+tauri = { version = "2", features = ["config-toml"] }
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "stream"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+toml_edit = "0.20"
+uuid = { version = "1", features = ["v4"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+base64 = "0.22"
+dirs = "6"
+anyhow = "1"
+chrono = "0.4"
+unicode-normalization = "0.1"
+futures-util = "0.3"
+gtk = "0.18"
+zbus = "5"
+
+[dev-dependencies]
+tempfile = "3"
